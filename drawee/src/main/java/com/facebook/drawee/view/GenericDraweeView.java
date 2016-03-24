@@ -60,6 +60,8 @@ import com.facebook.drawee.generic.RoundingParams;
  */
 public class GenericDraweeView extends DraweeView<GenericDraweeHierarchy> {
 
+  protected String placeholderUri= "";
+
   public GenericDraweeView(Context context, GenericDraweeHierarchy hierarchy) {
     super(context);
     setHierarchy(hierarchy);
@@ -281,6 +283,9 @@ public class GenericDraweeView extends DraweeView<GenericDraweeHierarchy> {
             roundingBorderPadding = gdhAttrs.getDimensionPixelSize(
                 R.styleable.GenericDraweeView_roundingBorderPadding,
                 roundingBorderPadding);
+
+          } else if (idx == R.styleable.GenericDraweeView_placeholderImageUri) {
+            placeholderUri = gdhAttrs.getString(R.styleable.GenericDraweeView_placeholderImageUri);
 
           }
         }

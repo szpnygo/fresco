@@ -80,6 +80,9 @@ public class SimpleDraweeView extends GenericDraweeView {
         sDraweeControllerBuilderSupplier,
         "SimpleDraweeView was not initialized!");
     mSimpleDraweeControllerBuilder = sDraweeControllerBuilderSupplier.get();
+    if (placeholderUri != null && !placeholderUri.isEmpty()){
+      setImageURI(Uri.parse(placeholderUri),null);
+    }
   }
 
   protected SimpleDraweeControllerBuilder getControllerBuilder() {

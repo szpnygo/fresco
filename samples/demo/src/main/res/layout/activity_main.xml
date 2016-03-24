@@ -17,6 +17,13 @@
       android:layout_weight="1"
       android:orientation="vertical">
     <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/placeholderImageUri"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        fresco:actualImageScaleType="fitCenter"
+        fresco:placeholderImageUri="http://www.smemo.info/icon.png" />
+    <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/baseline_jpeg"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -47,6 +54,20 @@
     android:layout_height="match_parent"
     android:layout_weight="1"
     android:orientation="vertical">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        fresco:actualImageScaleType="fitCenter"
+        fresco:placeholderImageUri="data:image/webp;base64,UklGRjgCAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQ
+        UxQSC0AAAABJ6AgbQNm1+EkTnRExDkWahpJgRIkoOCVgAKy/mVdSxvR/wyEHWJ49xCbCAcAVlA4IOQBAACQCgCdASoYA
+        BgAPlEkjkWjoiEUBAA4BQS2AE6ZQjgbyv8ZuWF3B3ANsBdoHoAeWj+s3wleTHcua7PMAYrNOLPHFqAbpKGWe8x3KqHen
+        7YXTMnmq/c9GqBtZtuQ0AAA/r031iZbkliICmd/QSg0OjEWbX/nv8v+g4UDPpobcehywI6oypX8hbuzcQndgaVt0zW5D
+        iZP6Ueo/21IPqsuRm1WyZHL3bJIFStwH8BOWif7xVniUiHwD5HwW8AXIZiq2maDmyIvxn4a0fetR+flTrt/5/Vq3BVTe
+        orYBHMN7L09DE9xDW/2+dj45/mCe9vjNUGRpT5EJhV8jDz/ZxPixLvN9Tl5iPD/neh1RCl6AOcx3JudnAseXqvm8dEtF
+        +rA40Bg881EW88XwU1oXf/5RY/4ToF9NwcXPLC/AodLaAFPpiXt+C6cFDIj+uqi12PWFO+p7jn1P+sjCpbP/OBdHIoez
+        8Rp6nslBEiFG19LKqv6dkGzLKtvt9dRIpz2sef2JFUVB+v+hvMMmQ4o6d8aMTGuv/4wZxogl/n/k3g83NO3bBnf7/TL8
+        Baf97pQw43+FVR0hXfpvD0k51yE35e2jNF/98Uv3fAfPXw0T8irZQR4r1/ktG5xrypg/aKDooBtoI5aQAAA" />
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/static_webp"
         android:layout_width="match_parent"
