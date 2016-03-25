@@ -34,6 +34,7 @@ import com.facebook.drawee.generic.RoundingParams;
  * Images & scale types parameters:
  * @attr ref com.facebook.R.styleable#GenericDraweeView_viewAspectRatio
  * @attr ref com.facebook.R.styleable#GenericDraweeView_placeholderImage
+ * @attr ref com.facebook.R.styleable#GenericDraweeView_imageUri
  * @attr ref com.facebook.R.styleable#GenericDraweeView_placeholderImageScaleType
  * @attr ref com.facebook.R.styleable#GenericDraweeView_retryImage
  * @attr ref com.facebook.R.styleable#GenericDraweeView_retryImageScaleType
@@ -60,7 +61,7 @@ import com.facebook.drawee.generic.RoundingParams;
  */
 public class GenericDraweeView extends DraweeView<GenericDraweeHierarchy> {
 
-  protected String placeholderUri= "";
+  protected String mImageUri= "";
 
   public GenericDraweeView(Context context, GenericDraweeHierarchy hierarchy) {
     super(context);
@@ -284,8 +285,8 @@ public class GenericDraweeView extends DraweeView<GenericDraweeHierarchy> {
                 R.styleable.GenericDraweeView_roundingBorderPadding,
                 roundingBorderPadding);
 
-          } else if (idx == R.styleable.GenericDraweeView_placeholderImageUri) {
-            placeholderUri = gdhAttrs.getString(R.styleable.GenericDraweeView_placeholderImageUri);
+          } else if (idx == R.styleable.GenericDraweeView_imageUri) {
+            mImageUri = gdhAttrs.getString(R.styleable.GenericDraweeView_imageUri);
 
           }
         }

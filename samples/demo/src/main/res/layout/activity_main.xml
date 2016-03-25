@@ -22,7 +22,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         fresco:actualImageScaleType="fitCenter"
-        fresco:placeholderImageUri="http://www.smemo.info/icon.png" />
+        fresco:imageUri="http://www.smemo.info/icon.png" />
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/baseline_jpeg"
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         fresco:actualImageScaleType="fitCenter"
-        fresco:placeholderImageUri="data:image/webp;base64,UklGRjgCAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQ
+        fresco:imageUri="data:image/webp;base64,UklGRjgCAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQ
         UxQSC0AAAABJ6AgbQNm1+EkTnRExDkWahpJgRIkoOCVgAKy/mVdSxvR/wyEHWJ49xCbCAcAVlA4IOQBAACQCgCdASoYA
         BgAPlEkjkWjoiEUBAA4BQS2AE6ZQjgbyv8ZuWF3B3ANsBdoHoAeWj+s3wleTHcua7PMAYrNOLPHFqAbpKGWe8x3KqHen
         7YXTMnmq/c9GqBtZtuQ0AAA/r031iZbkliICmd/QSg0OjEWbX/nv8v+g4UDPpobcehywI6oypX8hbuzcQndgaVt0zW5D

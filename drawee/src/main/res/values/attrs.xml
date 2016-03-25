@@ -16,8 +16,8 @@
     <!-- A drawable or color to be be used as a placeholder. -->
     <attr name="placeholderImage" format="reference"/>
 
-    <!-- A image uri to be be used as a placeholder. -->
-    <attr name="placeholderImageUri" format="string"/>
+    <!-- A image uri . -->
+    <attr name="imageUri" format="string"/>
 
     <!-- Scale type of the placeholder image. Ignored if placeholderImage is not specified. -->
     <attr name="placeholderImageScaleType">
