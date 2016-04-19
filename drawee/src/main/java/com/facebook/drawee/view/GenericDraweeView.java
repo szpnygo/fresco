@@ -13,22 +13,17 @@ import javax.annotation.Nullable;
 
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 
-import com.facebook.drawee.R;
-import com.facebook.drawee.drawable.AutoRotateDrawable;
-import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
-import com.facebook.drawee.generic.RoundingParams;
+import com.facebook.drawee.generic.GenericDraweeHierarchyInflater;
 
 /**
- * DraweeView that creates GenericDraweeHierarchy based on XML attributes.
+ * DraweeView that uses GenericDraweeHierarchy.
  *
+<<<<<<< HEAD
  * Fading animation parameters:
  * @attr ref com.facebook.R.styleable#GenericDraweeView_fadeDuration
  * Images & scale types parameters:
@@ -58,6 +53,10 @@ import com.facebook.drawee.generic.RoundingParams;
  * @attr ref com.facebook.R.styleable#GenericDraweeView_roundingBorderWidth
  * @attr ref com.facebook.R.styleable#GenericDraweeView_roundingBorderColor
  * @attr ref com.facebook.R.styleable#GenericDraweeView_roundingBorderPadding
+=======
+ * The hierarchy can be set either programmatically or inflated from XML.
+ * See {@link GenericDraweeHierarchyInflater} for supported XML attributes.
+>>>>>>> facebook/master
  */
 public class GenericDraweeView extends DraweeView<GenericDraweeHierarchy> {
 
@@ -89,6 +88,7 @@ public class GenericDraweeView extends DraweeView<GenericDraweeHierarchy> {
     inflateHierarchy(context, attrs);
   }
 
+<<<<<<< HEAD
   private void inflateHierarchy(Context context, @Nullable AttributeSet attrs) {
     Resources resources = context.getResources();
 
@@ -349,17 +349,12 @@ public class GenericDraweeView extends DraweeView<GenericDraweeHierarchy> {
       }
       builder.setRoundingParams(roundingParams);
     }
+=======
+  protected void inflateHierarchy(Context context, @Nullable AttributeSet attrs) {
+    GenericDraweeHierarchyBuilder builder =
+        GenericDraweeHierarchyInflater.inflateBuilder(context, attrs);
+    setAspectRatio(builder.getDesiredAspectRatio());
+>>>>>>> facebook/master
     setHierarchy(builder.build());
-  }
-
-  /**
-   * Returns the scale type indicated in XML, or null if the special 'none' value was found.
-   */
-  private static ScalingUtils.ScaleType getScaleTypeFromXml(
-      TypedArray attrs,
-      int attrId,
-      ScalingUtils.ScaleType defaultScaleType) {
-    int index = attrs.getInt(attrId, -1);
-    return index < 0 ? defaultScaleType : ScalingUtils.ScaleType.values()[index];
   }
 }
