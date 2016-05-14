@@ -88,12 +88,8 @@ public class SimpleDraweeView extends GenericDraweeView {
           attrs,
           R.styleable.SimpleDraweeView);
       try {
-        final int indexCount = gdhAttrs.getIndexCount();
-        for (int i = 0; i < indexCount; i++) {
-          final int attr = gdhAttrs.getIndex(i);
-          if (attr == R.styleable.SimpleDraweeView_imageUri) {
-            setImageURI(Uri.parse(gdhAttrs.getString(R.styleable.SimpleDraweeView_imageUri)),null);
-          }
+        if(gdhAttrs.hasValue(R.styleable.SimpleDraweeView_imageUri)) {
+          setImageURI(Uri.parse(gdhAttrs.getString(R.styleable.SimpleDraweeView_imageUri)), null);
         }
       } finally {
         gdhAttrs.recycle();
